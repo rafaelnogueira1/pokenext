@@ -5,22 +5,17 @@ import {
   ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/solid';
 
-const MENU = ['Home', 'Characters', 'Movies', 'Spaceships'];
+const MENU = ['Home', 'Pokemons', 'Types', 'Abilities'];
 
 export default function Sidebar() {
   return (
-    <div className='bg-primary p-5 h-full w-3/12 flex flex-col justify-between items-center'>
+    <div className='bg-primary p-5 w-2/12 flex flex-col justify-between items-center'>
       <div className='space-y-24 items-center flex flex-col'>
         <XMarkIcon className='w-7 h-7 text-white' />
 
         <div>
           <Link href='/'>
-            <Image
-              src='/images/sw-logo.svg'
-              alt='logo'
-              width={55}
-              height={55}
-            />
+            <Image src='/images/logo.png' alt='logo' width={175} height={175} />
           </Link>
         </div>
 
@@ -28,7 +23,7 @@ export default function Sidebar() {
           <ul className='space-y-3 flex flex-col'>
             {MENU.map((menu) => (
               <li key={menu}>
-                <Link href='/' className='text-white' key={menu}>
+                <Link href='/' className='text-white uppercase' key={menu}>
                   {menu}
                 </Link>
               </li>

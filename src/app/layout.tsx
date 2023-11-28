@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='h-full'>
-      <body className='h-full'>
-        <div className='flex space-x-5 h-full bg-sky-50'>
+    <html lang='en' className='min-h-screen'>
+      <body className='min-h-screen'>
+        <div className='flex space-x-5 min-h-screen bg-sky-50'>
           <Sidebar />
           <main className='p-5 w-full'>{children}</main>
         </div>

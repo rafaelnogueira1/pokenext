@@ -1,4 +1,4 @@
-import Heading from '@/components/heading/heading';
+import Title from '@/components/title/title';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
@@ -15,7 +15,7 @@ export default async function Pokemon({
 
   return (
     <>
-      <Heading title={pokemon.name} className='mt-4' />
+      <Title level={1} title={pokemon.name} className='text-2xl mt-4' />
       <div className='flex space-x-4'>
         <div className='w-3/4 space-y-4'>
           <section className='border border-sky-100 p-8 rounded-2xl bg-white'>
@@ -57,9 +57,7 @@ export default async function Pokemon({
 
           <section className='flex flex-col space-y-4 w-full'>
             <div className='border border-sky-100 p-5 rounded-2xl bg-white'>
-              <h2 className='text-md text-yellow-400 uppercase font-heading mb-4'>
-                Types
-              </h2>
+              <Title level={2} title='Types' className='text-yellow-400' />
               <ul className='space-y-1'>
                 {pokemon.types.map((type: any) => (
                   <li key={type.slot} className='capitalize'>
@@ -70,9 +68,7 @@ export default async function Pokemon({
             </div>
 
             <div className='border border-sky-100 p-5 rounded-2xl bg-white'>
-              <h2 className='text-md text-yellow-400 uppercase font-heading mb-4'>
-                Abilities
-              </h2>
+              <Title level={2} title='Abilities' className='text-yellow-400' />
               <ul className='space-y-1'>
                 {pokemon.abilities.map((ability: any) => (
                   <li key={ability.name} className='capitalize'>
@@ -106,9 +102,7 @@ export default async function Pokemon({
       </div>
 
       <section className='w-full border border-sky-100 p-5 rounded-2xl bg-white mt-10'>
-        <h2 className='text-md text-yellow-400 uppercase font-heading mb-4'>
-          Moves
-        </h2>
+        <Title level={2} title='Moves' className='text-yellow-400' />
         <ul className='grid grid-cols-10 gap-1'>
           {pokemon.moves.map((move: any) => (
             <li

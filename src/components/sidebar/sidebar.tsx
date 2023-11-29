@@ -14,7 +14,7 @@ const MENU = [
 
 export default function Sidebar() {
   return (
-    <div className='bg-primary p-5 w-2/12 flex flex-col justify-between items-center'>
+    <div className='bg-primary p-5 w-2/12 h-screen flex flex-col justify-between items-center fixed'>
       <div className='space-y-24 items-center flex flex-col'>
         <XMarkIcon className='w-7 h-7 text-white' />
 

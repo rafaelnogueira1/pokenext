@@ -1,6 +1,6 @@
-import ListData from '@/components/listData/listData';
 import Title from '@/components/title/title';
 import TypeDescription from '@/components/typeDescription/typeDescription';
+import Link from 'next/link';
 
 export default async function FetchList({
   title,
@@ -20,7 +20,18 @@ export default async function FetchList({
   return (
     <TypeDescription>
       <Title level={2} title={title} />
-      <ListData data={results} />
+      <ul className='space-y-2'>
+        {results.map((entry: any) => (
+          <li key={entry.name}>
+            <Link
+              href={`${pathName}/${entry.name}`}
+              className='text capitalize'
+            >
+              {entry.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </TypeDescription>
   );
 }

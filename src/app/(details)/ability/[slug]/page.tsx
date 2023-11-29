@@ -67,13 +67,13 @@ export default async function Ability({
           </TypeDescription>
         </div>
 
-        <div className='mt-10'>
+        <div className='mt-10 w-full'>
           <Title level={2} title='Pokemons' />
-          <div className='grid grid-cols-10 gap-4'>
+          <div className='flex flex-wrap gap-4'>
             {pokemon.map(({ pokemon }: any) => (
               <div
                 key={pokemon.name}
-                className='flex justify-between items-center bg-white border border-sky-100 rounded-xl py-3 px-4 text-gray-800 shadow-sm shadow-gray-200 capitalize'
+                className='flex w-fit justify-between items-center bg-white border border-sky-100 rounded-xl py-3 px-4 text-gray-800 shadow-sm shadow-gray-200 capitalize'
               >
                 {pokemon.name}
                 <ChevronRightIcon className='w-4 h-4 text-sky-900' />

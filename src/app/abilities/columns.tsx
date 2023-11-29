@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowsUpDownIcon, CubeIcon } from '@heroicons/react/24/solid';
 import { ColumnDef } from '@tanstack/react-table';
+import Link from 'next/link';
 
 export type Pokemons = {
   id: string;
@@ -27,13 +28,13 @@ export const columns: ColumnDef<Pokemons>[] = [
     cell: ({ row }) => {
       return (
         <div className='font-medium text-sky-800'>
-          <button
+          <Link
+            href={`/ability/${row.getValue('name')}`}
             className='bg-transparent border-0 capitalize'
-            onClick={() => console.log(row)}
           >
             <CubeIcon className='inline h-4 w-4 mr-2 text-sky-600' />{' '}
             {row.getValue('name')}
-          </button>
+          </Link>
         </div>
       );
     },

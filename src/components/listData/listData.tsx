@@ -1,9 +1,19 @@
-export default function ListData({ data }: { data: [] }) {
+import { cn } from '@/lib/utils';
+
+export default function ListData({
+  data,
+  property = 'name',
+  className,
+}: {
+  data: [];
+  property?: string;
+  className?: string;
+}) {
   return (
-    <ul className='space-y-1'>
+    <ul className={cn('space-y-2', className)}>
       {data.map((item: any) => (
-        <li key={item.name} className='capitalize'>
-          {item.name}
+        <li key={item[property]} className='capitalize'>
+          {item[property]}
         </li>
       ))}
     </ul>

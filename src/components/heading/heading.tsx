@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import Title from '../title/title';
 
 export default function Heading({
   title,
@@ -8,15 +9,10 @@ export default function Heading({
   className?: string;
 }) {
   return (
-    <header>
-      <h1
-        className={cn(
-          'text-2xl font-heading text-sky-600 uppercase mb-10',
-          className
-        )}
-      >
-        {title}
-      </h1>
-    </header>
+    <Title
+      level={1}
+      title={title}
+      className={cn('text-2xl mt-4 mb-10', className)}
+    />
   );
 }

@@ -1,3 +1,4 @@
+import Heading from '@/components/heading/heading';
 import Title from '@/components/title/title';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
@@ -8,14 +9,14 @@ export default async function Pokemon({
   params: { slug: string };
 }) {
   const pokemon = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/pokemon/${params.slug[0]}`
+    `${process.env.NEXT_PUBLIC_API_URL}/pokemon/${params.slug}`
   ).then((res: Response) => {
     return res.json();
   });
 
   return (
     <>
-      <Title level={1} title={pokemon.name} className='text-2xl mt-4' />
+      <Heading title={pokemon.name} />
       <div className='flex space-x-4'>
         <div className='w-3/4 space-y-4'>
           <section className='border border-sky-100 p-8 rounded-2xl bg-white'>

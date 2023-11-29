@@ -1,3 +1,4 @@
+import Heading from '@/components/heading/heading';
 import ListData from '@/components/listData/listData';
 import Title from '@/components/title/title';
 import TypeDescription from '@/components/typeDescription/typeDescription';
@@ -23,7 +24,7 @@ export default async function Type({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <Title level={1} title={type.name} className='text-2xl mt-4' />
+      <Heading title={type.name} />
       <section className='w-full'>
         <div className='grid grid-cols-4 gap-4 '>
           <TypeDescription className='flex flex-col justify-center items-center'>

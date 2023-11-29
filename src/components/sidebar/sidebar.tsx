@@ -5,7 +5,12 @@ import {
   ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/solid';
 
-const MENU = ['Home', 'Pokemons', 'Types', 'Abilities'];
+const MENU = [
+  { name: 'Home', url: '/' },
+  { name: 'Pokemons', url: '/pokemons' },
+  { name: 'Types', url: '/types' },
+  { name: 'Abilities', url: '/abilities' },
+];
 
 export default function Sidebar() {
   return (
@@ -22,9 +27,9 @@ export default function Sidebar() {
         <nav className='mt-7'>
           <ul className='space-y-3 flex flex-col'>
             {MENU.map((menu) => (
-              <li key={menu}>
-                <Link href='/' className='text-white uppercase' key={menu}>
-                  {menu}
+              <li key={menu.name}>
+                <Link href={menu.url} className='text-white uppercase'>
+                  {menu.name}
                 </Link>
               </li>
             ))}

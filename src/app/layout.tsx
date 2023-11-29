@@ -3,7 +3,7 @@ import './globals.css';
 import { Sidebar, SidebarSupport } from '@/components/sidebar';
 
 export const metadata: Metadata = {
-  title: 'Pokemon App',
+  title: 'PokeNext',
   description: 'Look for your favorite pokemom',
 };
 

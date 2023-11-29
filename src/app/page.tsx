@@ -1,7 +1,7 @@
 import Heading from '@/components/heading/heading';
 
-import FetchList from './components/fetchList';
-import SearchBox from './components/searchBox';
+import FetchList from '../components/fetchList/fetchList';
+import SearchBox from '../components/searchBox/searchBox';
 
 export default function Home() {
   return (

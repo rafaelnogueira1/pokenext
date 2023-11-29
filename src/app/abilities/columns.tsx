@@ -39,8 +39,4 @@ export const columns: ColumnDef<Pokemons>[] = [
       );
     },
   },
-  {
-    accessorKey: 'url',
-    header: 'URL',
-  },
 ];

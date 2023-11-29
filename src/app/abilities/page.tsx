@@ -4,7 +4,7 @@ import TableData from '@/components/tableData/tableData';
 
 export default async function Pokemons() {
   const { results } = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/ability?limit=9999`
+    `${process.env.NEXT_PUBLIC_API_URL}/ability?limit=100000&offset=0`
   ).then((res: Response) => {
     return res.json();
   });

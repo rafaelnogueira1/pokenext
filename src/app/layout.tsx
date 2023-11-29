@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Sidebar, SidebarSupport } from '@/components/sidebar';
+import Sidebar from '@/components/sidebar/sidebar';
 
 export const metadata: Metadata = {
   title: 'PokeNext',
@@ -17,7 +17,6 @@ export default function RootLayout({
       <body className='min-h-screen'>
         <div className='flex min-h-screen space-x-5 bg-sky-50 relative'>
           <Sidebar />
-          <SidebarSupport />
           <main className='p-5 w-full'>{children}</main>
         </div>
       </body>

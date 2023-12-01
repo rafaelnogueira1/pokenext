@@ -14,7 +14,7 @@ const MENU = [
 
 export default function Sidebar() {
   return (
-    <>
+    <div>
       <div className='bg-primary p-5 w-80 h-screen flex flex-col justify-between items-center fixed'>
         <div className='space-y-24 items-center flex flex-col'>
           <XMarkIcon className='w-7 h-7 text-white' />
@@ -49,6 +49,6 @@ export default function Sidebar() {
         </div>
       </div>
       <div className='bg-transparent w-80 p-5 h-screen' />
-    </>
+    </div>
   );
 }

@@ -1,4 +1,3 @@
-import Sidebar from '@/components/sidebar/sidebar';
 import BackPage from '@/components/backPage/backPage';
 
 export default function RootLayout({
@@ -7,9 +6,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className='p-5'>
       <BackPage />
       {children}
-    </>
+    </div>
   );
 }

@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang='en' className='min-h-screen'>
       <body className='min-h-screen'>
-        <div className='flex min-h-screen space-x-5 bg-sky-50 relative'>
+        <div className='flex min-h-screen bg-sky-50'>
           <Sidebar />
-          <main className='p-5 w-full'>{children}</main>
+          <main className='w-full'>{children}</main>
         </div>
       </body>
     </html>

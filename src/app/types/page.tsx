@@ -10,9 +10,9 @@ export default async function Pokemons() {
   });
 
   return (
-    <>
+    <div className='p-5'>
       <Heading title='Types' />
       <TableData columns={columns} data={results} />
-    </>
+    </div>
   );
 }

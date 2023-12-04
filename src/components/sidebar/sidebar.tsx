@@ -4,13 +4,7 @@ import {
   XMarkIcon,
   ArrowRightOnRectangleIcon,
 } from '@heroicons/react/24/solid';
-
-const MENU = [
-  { name: 'Home', url: '/' },
-  { name: 'Pokemons', url: '/pokemons' },
-  { name: 'Types', url: '/types' },
-  { name: 'Abilities', url: '/abilities' },
-];
+import { NAVIGATION } from '@/config/navigation';
 
 export default function Sidebar() {
   return (
@@ -32,7 +26,7 @@ export default function Sidebar() {
 
           <nav className='mt-7'>
             <ul className='space-y-3 flex flex-col'>
-              {MENU.map((menu) => (
+              {NAVIGATION.map((menu) => (
                 <li key={menu.name}>
                   <Link href={menu.url} className='text-white uppercase'>
                     {menu.name}

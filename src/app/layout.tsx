@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Sidebar from '@/components/sidebar/sidebar';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
   title: 'PokeNext',
@@ -9,16 +10,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='min-h-screen'>
+    <html lang='en' className='min-h-screen light'>
       <body className='min-h-screen'>
-        <div className='flex min-h-screen bg-sky-50'>
-          <Sidebar />
-          <main className='w-full'>{children}</main>
-        </div>
+        <Providers>
+          <div className='flex min-h-screen bg-sky-50'>
+            <Sidebar />
+            <main className='w-full'>
+              {children}
+              {modal}
+            </main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

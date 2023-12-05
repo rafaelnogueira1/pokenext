@@ -27,7 +27,7 @@ export default async function Pokemon({
       const res = await fetch(`${encounter.location_area.url}`);
       const data = await res.json();
       const [language] = data.names.filter(
-        (name) => name.language.name === 'en'
+        (name: any) => name.language.name === 'en'
       );
 
       return { name: language.name };

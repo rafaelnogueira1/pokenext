@@ -21,7 +21,7 @@ export function List({ locations }: { locations: any[] }) {
     <div className='space-y-5'>
       <div className='border border-sky-100 bg-white p-5 rounded-2xl'>
         <Heading title='Select a place to catch pokemons' />
-        <ul className='flex flex-wrap gap-5 h-80 overflow-y-scroll'>
+        <ul className='flex flex-wrap gap-5 h-40 overflow-y-scroll'>
           {locations?.map((location: any) => (
             <li key={location.name}>
               <button

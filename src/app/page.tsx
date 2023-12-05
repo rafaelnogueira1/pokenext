@@ -2,7 +2,6 @@ import Heading from '@/components/heading/heading';
 
 import FetchList from '../components/fetchList/fetchList';
 import SelectSearchBox from '../components/searchBox/selectSearchBox';
-import Loading from './loading';
 
 export default function Home() {
   return (

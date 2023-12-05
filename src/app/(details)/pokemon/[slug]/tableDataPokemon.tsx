@@ -6,9 +6,9 @@ import { columns } from './columns';
 export const columnsTable = [
   {
     accessorKey: 'name',
-    accessorFn: (row) => row.version.name,
+    accessorFn: (row: any) => row.version.name,
     header: 'Name',
-    cell: ({ getValue }) => {
+    cell: ({ getValue }: any) => {
       return <div className='font-medium text-sky-800 pl-4'>{getValue()}</div>;
     },
   },

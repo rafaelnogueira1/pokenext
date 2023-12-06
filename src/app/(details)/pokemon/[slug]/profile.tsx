@@ -1,9 +1,18 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { usePokeballCart } from '@/store/managePokeball';
 import Image from 'next/image';
 
 export function Profile({ pokemon }: { pokemon: any }) {
+  const pokeballCart = usePokeballCart();
+
+  if (!pokeballCart) {
+    return null;
+  }
+
+  const { addToPokeball } = pokeballCart;
+
   return (
     <div className='w-1/2 border border-sky-100 p-5 rounded-2xl bg-white'>
       <div className='flex justify-between items-center'>
@@ -38,7 +47,17 @@ export function Profile({ pokemon }: { pokemon: any }) {
           />
         </div>
       </div>
-      <Button variant='default' className='mt-5' onClick={() => {}}>
+      <Button
+        variant='default'
+        className='mt-5'
+        onClick={() =>
+          addToPokeball({
+            id: pokemon.id,
+            name: pokemon.name,
+            image: pokemon.sprites.front_default,
+          })
+        }
+      >
         Add to pokeball
       </Button>
     </div>

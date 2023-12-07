@@ -2,7 +2,10 @@
 
 Project developed in Nextjs using the Pokemon API, exploring the features of Nextjs 14+.
 
-You can access the project by [clicking here](link).
+You can access the project by [https://pokenext-taupe-ten.vercel.app/](https://pokenext-taupe-ten.vercel.app/).
+
+<img width="1434" alt="pokenext-home" src="https://github.com/rafaelnogueira1/pokenext/assets/43794542/aa7b5226-efb0-4ded-bde8-c8d5285b2bd1">
+
 
 ## How to run
 

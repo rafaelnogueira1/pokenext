@@ -27,7 +27,7 @@ export default async function Type({ params }: { params: { slug: string } }) {
       <Heading title={type.name} />
 
       <section className='w-full'>
-        <div className='grid grid-cols-4 gap-4 '>
+        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
           <TypeDescription className='flex flex-col justify-center items-center'>
             <Title level={2} title='Move Damage Class' />
             <p className='text-3xl uppercase text-yellow-400 mt-4'>

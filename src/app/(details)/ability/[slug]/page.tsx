@@ -50,7 +50,7 @@ export default async function Ability({
     <>
       <Heading title={abilities.name} />
       <section className='w-full'>
-        <div className='grid grid-cols-3 gap-4 '>
+        <div className='max-lg:space-y-5 lg:grid lg:grid-cols-3 gap-4'>
           <TypeDescription>
             <Title level={2} title='Description' />
             <ListData data={flavor_text_entries} property='flavor_text' />

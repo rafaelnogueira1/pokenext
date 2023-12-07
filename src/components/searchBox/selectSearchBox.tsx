@@ -25,9 +25,12 @@ export default function SelectSearchBox() {
 
   return (
     <div className='rounded-2xl border border-sky-100 p-5 bg-white w-full'>
-      <form className='flex space-x-3' onSubmit={handleSearch}>
+      <form
+        className='max-sm:space-y-3 md:flex md:space-x-3'
+        onSubmit={handleSearch}
+      >
         <Select name='type' onValueChange={(value) => (type.current = value)}>
-          <SelectTrigger className='w-[280px]'>
+          <SelectTrigger className='lg:w-[280px]'>
             <SelectValue placeholder='Select a type' />
           </SelectTrigger>
           <SelectContent>
@@ -41,7 +44,7 @@ export default function SelectSearchBox() {
           name='search'
           onChange={(e) => (search.current = e.target.value)}
         />
-        <Button type='submit' className='w-1/4 h-12 rounded-full'>
+        <Button type='submit' className='w-full md:w-1/4 h-12 rounded-full'>
           Search
         </Button>
       </form>

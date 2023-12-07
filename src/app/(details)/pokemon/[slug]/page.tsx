@@ -36,22 +36,22 @@ export default async function Pokemon({
 
   return (
     <div>
-      <div className='grid grid-cols-2'>
+      <div className='lg:grid lg:grid-cols-2'>
         <Heading title={pokemon.name} />
         <Search />
       </div>
-      <section className='flex gap-5'>
+      <section className='md:mt-5 md:flex gap-5'>
         <Profile pokemon={pokemon} />
-        <div className='grid grid-cols-3 gap-5 w-full h-fit'>
+        <div className='max-sm:mt-5 grid grid-cols-2 lg:grid-cols-3 gap-5 w-full h-fit'>
           {pokemon.stats.map((stat: any) => (
             <div
               key={stat.stat.name}
-              className='capitalize border border-sky-100 p-5 rounded-2xl bg-white flex items-center h-fit'
+              className='max-lg:space-y-1 max-lg:text-center capitalize border border-sky-100 p-5 rounded-2xl bg-white lg:flex items-center h-fit'
             >
-              <div className='rounded-xl border border-sky-400 bg-sky-600 flex justify-center items-center p-3 mr-3'>
+              <div className='max-lg:mx-auto rounded-xl border border-sky-400 bg-sky-600 flex justify-center items-center p-3 mr-3'>
                 <HeartIcon className='w-6 h-6 text-white' />
               </div>
-              <p className='text-sky-600'>
+              <p className='text-sky-600 md:mt-2'>
                 <span className='text-md text-sky-900 uppercase font-heading mb-1'>
                   {stat.stat.name}
                 </span>
@@ -87,10 +87,10 @@ export default async function Pokemon({
         </div>
       </section>
 
-      <section className='flex gap-5'>
-        <div className='w-1/2 border border-sky-100 p-5 rounded-2xl bg-white mt-4'>
+      <section className='max-sm:space-y-5 lg:flex gap-5'>
+        <div className='lg:w-1/2 border border-sky-100 p-5 rounded-2xl bg-white mt-4'>
           <Title level={2} title='Moves' className='text-yellow-400' />
-          <ul className='grid grid-cols-10 gap-1'>
+          <ul className='grid grid-cols-3 max-sm:h-60 md:h-96 md:overflow-y-scroll 2xl:grid-cols-10 gap-1'>
             {pokemon.moves.map((move: any) => (
               <li
                 key={move.move.name}
@@ -102,7 +102,7 @@ export default async function Pokemon({
           </ul>
         </div>
 
-        <div className='w-1/2 border border-sky-100 p-5 rounded-2xl bg-white mt-4'>
+        <div className='lg:w-1/2 border border-sky-100 p-5 rounded-2xl bg-white mt-4'>
           <Title level={2} title='Locations' className='text-yellow-400' />
           <TableDataPokemon data={encountersList} />
         </div>

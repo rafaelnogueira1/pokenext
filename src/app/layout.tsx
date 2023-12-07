@@ -16,10 +16,10 @@ export default function RootLayout({
   modal: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='min-h-screen light'>
+    <html lang='en' className='min-h-screen'>
       <body className='min-h-screen'>
         <Providers>
-          <div className='flex min-h-screen bg-sky-50'>
+          <div className='md:flex min-h-screen bg-sky-50'>
             <Sidebar />
             <main className='w-full'>
               {children}

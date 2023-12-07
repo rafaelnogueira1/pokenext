@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function Profile({ pokemon }: { pokemon: any }) {
   return (
-    <div className='w-1/2 border border-sky-100 p-5 rounded-2xl bg-white'>
+    <div className='md:w-1/2 border border-sky-100 p-5 rounded-2xl bg-white'>
       <div className='flex justify-between items-center'>
         <ul className='space-y-3'>
           <li>

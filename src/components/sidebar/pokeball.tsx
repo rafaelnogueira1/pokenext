@@ -15,7 +15,7 @@ import Title from '../title/title';
 export function Pokeball() {
   return (
     <div className='relative'>
-      <span className='text-yellow-500 bg-white px-2 py-0.5 rounded-full text-md font-bold absolute -top-3 -right-3'>
+      <span className='text-yellow-500 bg-white px-1 rounded-full text-sm font-bold absolute -top-2 -right-2 md:-top-3 md:-right-3 md:px-2 md:py-0.5'>
         0
       </span>
       <Sheet>
@@ -25,6 +25,7 @@ export function Pokeball() {
             width={45}
             height={45}
             alt='Pokeball'
+            className='w-[30px] md:w-[45px]'
           />
         </SheetTrigger>
         <SheetContent side='left' className='bg-sky-500 text-white'>

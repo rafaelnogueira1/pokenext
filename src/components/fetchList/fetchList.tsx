@@ -20,7 +20,7 @@ export default async function FetchList({
   return (
     <TypeDescription>
       <Title level={2} title={title} />
-      <ul className='space-y-2'>
+      <ul className='max-sm:grid max-sm:grid-cols-2 max-sm:gap-2 md:space-y-2'>
         {results.map((entry: any) => (
           <li key={entry.name}>
             <Link
